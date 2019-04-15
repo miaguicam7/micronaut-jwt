@@ -4,5 +4,3 @@ build
 *.iml
 .DS_Store
 *.db
-*.kt
-
