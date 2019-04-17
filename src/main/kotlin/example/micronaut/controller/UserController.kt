@@ -5,11 +5,14 @@ import example.micronaut.repository.UserRepository
 import io.micronaut.http.HttpResponse
 import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.*
+import io.micronaut.security.annotation.Secured
 import javax.validation.Valid
+
 
 @Controller("/users")
 class UserController(val userRepository: UserRepository) {
 
+    @Secured("isAuthenticated()")
     @Get(produces = [MediaType.APPLICATION_JSON])
     fun list() = HttpResponse.ok<Any>(userRepository.getAllUsers())
 
