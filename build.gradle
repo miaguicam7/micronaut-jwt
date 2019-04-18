@@ -31,7 +31,8 @@ dependencies {
     compile "io.micronaut:micronaut-runtime"
     compile "io.micronaut:micronaut-validation"
     compile "io.micronaut:micronaut-security-jwt"
-    compile group: 'io.projectreactor', name: 'reactor-core'
+    compile "io.projectreactor:reactor-core"
+    compile "software.amazon.awssdk:dynamodb:${awsSdkVersion}"
     kapt "io.micronaut:micronaut-inject-java"
     kapt "io.micronaut:micronaut-validation"
     kaptTest "io.micronaut:micronaut-inject-java"
